@@ -1,0 +1,1889 @@
+{
+    "document": {
+        "fields": [
+            {
+                "title": "Извещение о проведении торгов",
+                "name": "announcement",
+                "type": "document",
+                "document": {
+                    "fields": [
+                        {
+                            "title": "Наименование торгов",
+                            "validation": {
+                                "validators": [
+                                    {
+                                        "type": "notBlank",
+                                        "message": "Поле должно быть заполнено"
+                                    }
+                                ]
+                            },
+                            "name": "title",
+                            "type": "string",
+                            "value": "Легковые автомобили, KAWASAKI ER-6N, 2011, 40GG02, КОМБИНИРОВАННЫЙ"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Контактная информация оператора торгов",
+                "name": "contacts",
+                "type": "document",
+                "document": {
+                    "fields": [
+                        {
+                            "title": "Оператор",
+                            "name": "organizer",
+                            "type": "label",
+                            "value": "РП ЧСИ РК"
+                        },
+                        {
+                            "title": "Номер контактного телефона",
+                            "validation": {
+                                "validators": [
+                                    {
+                                        "type": "notBlank",
+                                        "message": "Поле должно быть заполнено"
+                                    }
+                                ]
+                            },
+                            "name": "phone",
+                            "type": "string",
+                            "value": "+7 (7172) 23-59-01"
+                        },
+                        {
+                            "title": "Адрес оператора",
+                            "name": "address",
+                            "type": "string",
+                            "value": "г. Астана, переулок Талды, д. 4"
+                        },
+                        {
+                            "title": "Дополнительные контакты по процедуре",
+                            "size": "short",
+                            "maxlength": 2000,
+                            "name": "additionalContacts",
+                            "type": "text"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Судебный исполнитель",
+                "name": "courtOfficer",
+                "type": "document",
+                "document": {
+                    "fields": [
+                        {
+                            "title": "Тип судебного исполнителя",
+                            "validation": {
+                                "validators": [
+                                    {
+                                        "type": "notBlank",
+                                        "message": "Поле должно быть заполнено"
+                                    }
+                                ]
+                            },
+                            "name": "types",
+                            "type": "select",
+                            "source": {
+                                "values": [
+                                    {
+                                        "name": "100806744",
+                                        "title": "Государственный судебный исполнитель"
+                                    },
+                                    {
+                                        "name": "100806745",
+                                        "title": "Частный судебный исполнитель"
+                                    }
+                                ]
+                            },
+                            "allowMultiple": false,
+                            "mode": "simple",
+                            "initialValues": [
+                                {
+                                    "name": "100806745",
+                                    "title": "Частный судебный исполнитель"
+                                }
+                            ],
+                            "value": "100806745"
+                        },
+                        {
+                            "title": "Наименование территориального отдела",
+                            "validation": {
+                                "validators": [
+                                    {
+                                        "type": "notBlank",
+                                        "message": "Поле должно быть заполнено"
+                                    }
+                                ]
+                            },
+                            "name": "currentOrganizationData.arbitrationOrganization",
+                            "type": "string",
+                            "value": "Частные судебные исполнители г.Алматы – г.Алматы"
+                        },
+                        {
+                            "title": "ФИО",
+                            "validation": {
+                                "validators": [
+                                    {
+                                        "type": "notBlank",
+                                        "message": "Поле должно быть заполнено"
+                                    }
+                                ]
+                            },
+                            "name": "currentOrganizationData.title",
+                            "type": "string",
+                            "value": "ҚАМРАНБАЙ ӘМІР СЕРІКҰЛЫ"
+                        },
+                        {
+                            "title": "Адрес",
+                            "validation": {
+                                "validators": [
+                                    {
+                                        "type": "notBlank",
+                                        "message": "Поле должно быть заполнено"
+                                    }
+                                ]
+                            },
+                            "name": "currentOrganizationData.simpleAddress",
+                            "type": "string",
+                            "value": "Алматы қ."
+                        },
+                        {
+                            "title": "Телефон",
+                            "validation": {
+                                "validators": [
+                                    {
+                                        "type": "notBlank",
+                                        "message": "Поле должно быть заполнено"
+                                    }
+                                ]
+                            },
+                            "name": "currentOrganizationData.phone",
+                            "type": "string",
+                            "value": "+77757797900"
+                        },
+                        {
+                            "title": "Номер счета для внесения покупной стоимости",
+                            "validation": {
+                                "validators": [
+                                    {
+                                        "type": "notBlank",
+                                        "message": "Поле должно быть заполнено"
+                                    }
+                                ]
+                            },
+                            "name": "currentAccount",
+                            "type": "string",
+                            "value": "KZ7696502F0017514545"
+                        },
+                        {
+                            "title": "Банк счета для внесения покупной стоимости",
+                            "validation": {
+                                "validators": [
+                                    {
+                                        "type": "notBlank",
+                                        "message": "Поле должно быть заполнено"
+                                    }
+                                ]
+                            },
+                            "name": "bankTitle",
+                            "type": "string",
+                            "value": "АО \"ForteBank\""
+                        },
+                        {
+                            "title": "БИК счета для внесения покупной стоимости",
+                            "validation": {
+                                "validators": [
+                                    {
+                                        "type": "notBlank",
+                                        "message": "Поле должно быть заполнено"
+                                    }
+                                ]
+                            },
+                            "name": "swift",
+                            "type": "string",
+                            "value": "IRTYKZKA"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Информация о процедуре торгов",
+                "name": "conditions",
+                "type": "document",
+                "document": {
+                    "fields": [
+                        {
+                            "hideFromEdit": true,
+                            "title": "Статус",
+                            "name": "processStatusTitle",
+                            "type": "label",
+                            "value": "Приём заявок"
+                        },
+                        {
+                            "hideFromEdit": true,
+                            "title": "Статус Подписи Судебного исполнителя",
+                            "name": "signedSiTxt",
+                            "type": "label",
+                            "value": "Не подписан судебным исполнителем"
+                        },
+                        {
+                            "title": "Форма торгов",
+                            "displayMode": "VIEW",
+                            "name": "procurementMethod",
+                            "type": "select",
+                            "source": {
+                                "values": [
+                                    {
+                                        "name": "corporateSalesOpenAuction",
+                                        "title": "Электронный аукцион"
+                                    }
+                                ]
+                            },
+                            "allowMultiple": false,
+                            "mode": "simple",
+                            "initialValues": [
+                                {
+                                    "name": "corporateSalesOpenAuction",
+                                    "title": "Электронный аукцион"
+                                }
+                            ],
+                            "value": "corporateSalesOpenAuction"
+                        },
+                        {
+                            "title": "Доступ к участию в торгах",
+                            "validation": {
+                                "validators": [
+                                    {
+                                        "type": "notBlank",
+                                        "message": "Поле должно быть заполнено"
+                                    }
+                                ]
+                            },
+                            "name": "participationForm",
+                            "type": "select",
+                            "source": {
+                                "values": [
+                                    {
+                                        "name": "PUBLIC",
+                                        "title": "Публичные торги"
+                                    }
+                                ]
+                            },
+                            "allowMultiple": false,
+                            "mode": "simple",
+                            "initialValues": [
+                                {
+                                    "name": "PUBLIC",
+                                    "title": "Публичные торги"
+                                }
+                            ],
+                            "value": "PUBLIC"
+                        },
+                        {
+                            "title": "Дата окончания приема заявок",
+                            "validation": {
+                                "validators": [
+                                    {
+                                        "type": "notBlank",
+                                        "message": "Поле должно быть заполнено"
+                                    }
+                                ]
+                            },
+                            "name": "bidSubmissionEndDate",
+                            "type": "dateTime",
+                            "value": 1772514000000,
+                            "mode": "KENDO"
+                        },
+                        {
+                            "title": "Дата и время начала электронного аукциона",
+                            "validation": {
+                                "validators": [
+                                    {
+                                        "type": "notBlank",
+                                        "message": "Поле должно быть заполнено"
+                                    }
+                                ]
+                            },
+                            "name": "tradeStartDate",
+                            "type": "dateTime",
+                            "value": 1772600400000,
+                            "mode": "KENDO"
+                        },
+                        {
+                            "title": "Валюта договора",
+                            "displayMode": "VIEW",
+                            "validation": {
+                                "validators": [
+                                    {
+                                        "type": "notBlank",
+                                        "message": "Поле должно быть заполнено"
+                                    }
+                                ]
+                            },
+                            "name": "currency",
+                            "type": "select",
+                            "source": {
+                                "values": [
+                                    {
+                                        "name": "100484130",
+                                        "title": "CNY"
+                                    },
+                                    {
+                                        "name": "100484264",
+                                        "title": "EUR"
+                                    },
+                                    {
+                                        "name": "100484242",
+                                        "title": "GBP"
+                                    },
+                                    {
+                                        "name": "100484165",
+                                        "title": "KZT"
+                                    },
+                                    {
+                                        "name": "100484212",
+                                        "title": "RUB"
+                                    },
+                                    {
+                                        "name": "100484244",
+                                        "title": "USD"
+                                    }
+                                ]
+                            },
+                            "allowMultiple": false,
+                            "mode": "selectize",
+                            "initialValues": [
+                                {
+                                    "name": "100484165",
+                                    "title": "KZT"
+                                }
+                            ],
+                            "value": "100484165"
+                        }
+                    ]
+                }
+            },
+            {
+                "previewTemplate": "fields/trades/propertySalesLots.html",
+                "name": "lots",
+                "type": "collection",
+                "template": {
+                    "fields": [
+                        {
+                            "title": "Информация о лоте",
+                            "name": "info",
+                            "type": "document",
+                            "document": {
+                                "fields": [
+                                    {
+                                        "hideFromEdit": true,
+                                        "title": "Номер лота",
+                                        "name": "number",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "hideFromEdit": true,
+                                        "title": "Статус",
+                                        "name": "processStatusTitle",
+                                        "type": "label",
+                                        "value": "Приём заявок"
+                                    },
+                                    {
+                                        "title": "Краткие сведения об имуществе (наименование лота)",
+                                        "validation": {
+                                            "validators": [
+                                                {
+                                                    "type": "notBlank",
+                                                    "message": "Поле должно быть заполнено"
+                                                }
+                                            ]
+                                        },
+                                        "name": "title",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "title": "Сведения об имуществе, выставляемом на торги, его составе, характеристиках, описание",
+                                        "name": "goodsDescription",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "title": "Место нахождения имущества",
+                                        "validation": {
+                                            "validators": [
+                                                {
+                                                    "type": "notBlank",
+                                                    "message": "Поле должно быть заполнено"
+                                                }
+                                            ]
+                                        },
+                                        "name": "purchaseTerms",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "title": "Фотографии и прочие документы по лоту",
+                                        "name": "attachments_other",
+                                        "type": "file",
+                                        "allowMultiple": true,
+                                        "documentType": "other",
+                                        "requiresSignature": true,
+                                        "allowChooseFromTemplates": false,
+                                        "value": []
+                                    },
+                                    {
+                                        "title": "Рыночная стоимость",
+                                        "validation": {
+                                            "validators": [
+                                                {
+                                                    "type": "order",
+                                                    "comparison": ">",
+                                                    "message": "Значение должно быть больше нуля",
+                                                    "value": 0
+                                                }
+                                            ]
+                                        },
+                                        "name": "marketPrice",
+                                        "type": "price",
+                                        "decimals": 0
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "title": "Информация о ходе торгов",
+                            "name": "initialContractPrice",
+                            "type": "document",
+                            "document": {
+                                "fields": [
+                                    {
+                                        "previewTitle": "Стартовая цена лота",
+                                        "title": "Стартовая цена лота",
+                                        "validation": {
+                                            "validators": [
+                                                {
+                                                    "type": "order",
+                                                    "comparison": ">",
+                                                    "message": "Значение должно быть больше нуля",
+                                                    "value": 0
+                                                },
+                                                {
+                                                    "type": "notBlank",
+                                                    "message": "Поле должно быть заполнено"
+                                                }
+                                            ]
+                                        },
+                                        "name": "initialContractPrice",
+                                        "type": "price",
+                                        "decimals": 0
+                                    },
+                                    {
+                                        "title": "Размер гарантийного взноса",
+                                        "displayMode": "VIEW",
+                                        "layout": {
+                                            "type": "horizontal",
+                                            "showTitles": true
+                                        },
+                                        "name": "bidAssurance",
+                                        "type": "document",
+                                        "document": {
+                                            "fields": [
+                                                {
+                                                    "validation": {
+                                                        "validators": [
+                                                            {
+                                                                "type": "order",
+                                                                "comparison": ">",
+                                                                "message": "Значение должно быть больше нуля",
+                                                                "value": 0
+                                                            }
+                                                        ]
+                                                    },
+                                                    "name": "value",
+                                                    "type": "price",
+                                                    "decimals": 0
+                                                },
+                                                {
+                                                    "name": "mode",
+                                                    "type": "select",
+                                                    "source": {
+                                                        "values": [
+                                                            {
+                                                                "name": "PERCENTS",
+                                                                "title": "процентов"
+                                                            },
+                                                            {
+                                                                "name": "UNITS",
+                                                                "title": "в валюте торгов"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "allowMultiple": false,
+                                                    "mode": "simple"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "title": "Размер гарантийного взноса в тенге",
+                                        "validation": {
+                                            "validators": [
+                                                {
+                                                    "type": "order",
+                                                    "comparison": ">",
+                                                    "message": "Значение должно быть больше нуля",
+                                                    "value": 0
+                                                }
+                                            ]
+                                        },
+                                        "name": "assuranceAmount",
+                                        "type": "price",
+                                        "decimals": 0
+                                    },
+                                    {
+                                        "hideFromEdit": true,
+                                        "previewTitle": "Шаг снижения",
+                                        "title": "Величина снижения цены первоначального предложения",
+                                        "layout": {
+                                            "type": "horizontal",
+                                            "showTitles": true
+                                        },
+                                        "validation": {
+                                            "validators": [
+                                                {
+                                                    "type": "notBlank",
+                                                    "message": "Поле должно быть заполнено"
+                                                }
+                                            ]
+                                        },
+                                        "name": "tradeStep",
+                                        "type": "document",
+                                        "document": {
+                                            "fields": [
+                                                {
+                                                    "validation": {
+                                                        "validators": [
+                                                            {
+                                                                "type": "order",
+                                                                "comparison": ">",
+                                                                "message": "Значение должно быть больше нуля",
+                                                                "value": 0
+                                                            }
+                                                        ]
+                                                    },
+                                                    "name": "value",
+                                                    "type": "price",
+                                                    "decimals": 0
+                                                },
+                                                {
+                                                    "name": "mode",
+                                                    "type": "select",
+                                                    "source": {
+                                                        "values": [
+                                                            {
+                                                                "name": "PERCENTS",
+                                                                "title": "процентов"
+                                                            },
+                                                            {
+                                                                "name": "UNITS",
+                                                                "title": "в валюте торгов"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "allowMultiple": false,
+                                                    "mode": "simple"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "hideFromEdit": true,
+                                        "previewTitle": "Шаг аукциона",
+                                        "title": "Величина повышения цены",
+                                        "layout": {
+                                            "type": "horizontal",
+                                            "showTitles": true
+                                        },
+                                        "validation": {
+                                            "validators": [
+                                                {
+                                                    "type": "notBlank",
+                                                    "message": "Поле должно быть заполнено"
+                                                },
+                                                {
+                                                    "type": "notBlank",
+                                                    "message": "Поле должно быть заполнено"
+                                                }
+                                            ]
+                                        },
+                                        "name": "priceStep",
+                                        "type": "document",
+                                        "document": {
+                                            "fields": [
+                                                {
+                                                    "validation": {
+                                                        "validators": [
+                                                            {
+                                                                "type": "order",
+                                                                "comparison": ">",
+                                                                "message": "Значение должно быть больше нуля",
+                                                                "value": 0
+                                                            }
+                                                        ]
+                                                    },
+                                                    "name": "value",
+                                                    "type": "price",
+                                                    "decimals": 0
+                                                },
+                                                {
+                                                    "name": "mode",
+                                                    "type": "select",
+                                                    "source": {
+                                                        "values": [
+                                                            {
+                                                                "name": "PERCENTS",
+                                                                "title": "процентов"
+                                                            },
+                                                            {
+                                                                "name": "UNITS",
+                                                                "title": "в валюте торгов"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "allowMultiple": false,
+                                                    "mode": "simple",
+                                                    "initialValues": [
+                                                        {
+                                                            "name": "PERCENTS",
+                                                            "title": "процентов"
+                                                        }
+                                                    ],
+                                                    "value": "PERCENTS"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                "minDocuments": 1,
+                "maxDocuments": 1,
+                "view": "default",
+                "collapsedConfiguration": {
+                    "columns": [
+                        {
+                            "path": "info/title",
+                            "title": "Наименование лота"
+                        },
+                        {
+                            "path": "info/goodsDescription",
+                            "title": "Краткое описание предмета договора"
+                        },
+                        {
+                            "path": "initialContractPrice/initialContractPrice",
+                            "title": "Начальная стоимость"
+                        }
+                    ]
+                },
+                "locked": true,
+                "documents": [
+                    {
+                        "ref": "112356020",
+                        "lot": {
+                            "status": {
+                                "name": "BID_SUBMISSION",
+                                "icon": "fa fa-envelope-o",
+                                "title": "Приём заявок"
+                            }
+                        },
+                        "actions": {},
+                        "errors": [],
+                        "fields": [
+                            {
+                                "title": "Информация о лоте",
+                                "name": "info",
+                                "type": "document",
+                                "document": {
+                                    "fields": [
+                                        {
+                                            "hideFromEdit": true,
+                                            "title": "Номер лота",
+                                            "name": "number",
+                                            "type": "string",
+                                            "value": "1"
+                                        },
+                                        {
+                                            "hideFromEdit": true,
+                                            "title": "Статус",
+                                            "name": "processStatusTitle",
+                                            "type": "label",
+                                            "value": "Приём заявок"
+                                        },
+                                        {
+                                            "title": "Краткие сведения об имуществе (наименование лота)",
+                                            "validation": {
+                                                "validators": [
+                                                    {
+                                                        "type": "notBlank",
+                                                        "message": "Поле должно быть заполнено"
+                                                    }
+                                                ]
+                                            },
+                                            "name": "title",
+                                            "type": "string",
+                                            "value": "Легковые автомобили, KAWASAKI ER-6N, 2011, 40GG02, КОМБИНИРОВАННЫЙ"
+                                        },
+                                        {
+                                            "title": "Сведения об имуществе, выставляемом на торги, его составе, характеристиках, описание",
+                                            "name": "goodsDescription",
+                                            "type": "text",
+                                            "value": "Объект: легковые автомобили, 1.000 ШТУКА, KAWASAKI ER-6N, 2011, 40GG02, КОМБИНИРОВАННЫЙ\nКомментарий: Автотранспортное средство (мотоцикл) марки KAWASAKI ER-6N 2011 года выпуска, комбинированного цвета, номер шасси: JKAER650EEDA01250, ГРНЗ: 40GG02., \nКоличество: 1.0 ШТ\nИмеются обременения"
+                                        },
+                                        {
+                                            "title": "Место нахождения имущества",
+                                            "validation": {
+                                                "validators": [
+                                                    {
+                                                        "type": "notBlank",
+                                                        "message": "Поле должно быть заполнено"
+                                                    }
+                                                ]
+                                            },
+                                            "name": "purchaseTerms",
+                                            "type": "text",
+                                            "value": "г. Алматы, Ауэзовский район, мкр-12, д.37 (гаражный кооператив «Волга»)."
+                                        },
+                                        {
+                                            "title": "Фотографии и прочие документы по лоту",
+                                            "name": "attachments_other",
+                                            "type": "file",
+                                            "allowMultiple": true,
+                                            "documentType": "other",
+                                            "requiresSignature": true,
+                                            "allowChooseFromTemplates": false,
+                                            "value": [
+                                                {
+                                                    "name": "2.jpeg",
+                                                    "href": "/files/get/47Uu11PVX8hc2cgbgZXuWq1ayZE6sVBhnXGQXCnxceTrAAwtdS243915St7zx3AV8PuwpwGq8ZShtrnYtJaVaj7Uab85qHiwRtR/2.jpeg",
+                                                    "type": "image/jpeg",
+                                                    "size": 120272,
+                                                    "reference": "nZ99yrVMFuvRtGnYJT63gqSkbut7eLT6dgKJeKb1TUoTUMdN3m4YMWDE8ywg",
+                                                    "id": 112356096,
+                                                    "uid": "112356096",
+                                                    "preview": {
+                                                        "id": 112356096,
+                                                        "name": "2.jpeg",
+                                                        "token": "47Uu11PVX8hc2cgbgZXuWq1ayZE6sVBhnXGQXCnxceTrAAwtdS243915St7zx3AV8PuwpwGq8ZShtrnYtJaVaj7Uab85qHiwRtR",
+                                                        "href": "/files/get/47Uu11PVX8hc2cgbgZXuWq1ayZE6sVBhnXGQXCnxceTrAAwtdS243915St7zx3AV8PuwpwGq8ZShtrnYtJaVaj7Uab85qHiwRtR/2.jpeg",
+                                                        "icon": "fa fa-file-o",
+                                                        "size": "117,45 Кбайт",
+                                                        "date": "20.02.2026",
+                                                        "generating": false,
+                                                        "documentType": {
+                                                            "code": "other",
+                                                            "id": 100730731,
+                                                            "title": "Другие документы"
+                                                        },
+                                                        "signature": {
+                                                            "id": 112356098,
+                                                            "signer": "ИМАНБАЕВ АЙДОС, Республиканская палата частных судебных исполнителей Республики Казахстан"
+                                                        },
+                                                        "signatures": [
+                                                            {
+                                                                "id": 112356098,
+                                                                "signer": "ИМАНБАЕВ АЙДОС, Республиканская палата частных судебных исполнителей Республики Казахстан"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "thumbnail": "/files/get/47Uu11PVX8hc2cgbgZXuWq1ayZE6sVBhnXGQXCnxceSt1rTE3FryswEdhokzPGWa3eULmQNmcjbUpgEzQ7bqxQ3MPprocicC8XD/2.jpeg"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "title": "Рыночная стоимость",
+                                            "validation": {
+                                                "validators": [
+                                                    {
+                                                        "type": "order",
+                                                        "comparison": ">",
+                                                        "message": "Значение должно быть больше нуля",
+                                                        "value": 0
+                                                    }
+                                                ]
+                                            },
+                                            "name": "marketPrice",
+                                            "type": "price",
+                                            "decimals": 0
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "title": "Информация о ходе торгов",
+                                "name": "initialContractPrice",
+                                "type": "document",
+                                "document": {
+                                    "fields": [
+                                        {
+                                            "previewTitle": "Стартовая цена лота",
+                                            "title": "Стартовая цена лота",
+                                            "validation": {
+                                                "validators": [
+                                                    {
+                                                        "type": "order",
+                                                        "comparison": ">",
+                                                        "message": "Значение должно быть больше нуля",
+                                                        "value": 0
+                                                    },
+                                                    {
+                                                        "type": "notBlank",
+                                                        "message": "Поле должно быть заполнено"
+                                                    }
+                                                ]
+                                            },
+                                            "name": "initialContractPrice",
+                                            "type": "price",
+                                            "decimals": 0,
+                                            "value": 2100000.00
+                                        },
+                                        {
+                                            "title": "Размер гарантийного взноса",
+                                            "displayMode": "VIEW",
+                                            "layout": {
+                                                "type": "horizontal",
+                                                "showTitles": true
+                                            },
+                                            "name": "bidAssurance",
+                                            "type": "document",
+                                            "document": {
+                                                "fields": [
+                                                    {
+                                                        "validation": {
+                                                            "validators": [
+                                                                {
+                                                                    "type": "order",
+                                                                    "comparison": ">",
+                                                                    "message": "Значение должно быть больше нуля",
+                                                                    "value": 0
+                                                                }
+                                                            ]
+                                                        },
+                                                        "name": "value",
+                                                        "type": "price",
+                                                        "decimals": 0,
+                                                        "value": 5.00
+                                                    },
+                                                    {
+                                                        "name": "mode",
+                                                        "type": "select",
+                                                        "source": {
+                                                            "values": [
+                                                                {
+                                                                    "name": "PERCENTS",
+                                                                    "title": "процентов"
+                                                                },
+                                                                {
+                                                                    "name": "UNITS",
+                                                                    "title": "в валюте торгов"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "allowMultiple": false,
+                                                        "mode": "simple",
+                                                        "initialValues": [
+                                                            {
+                                                                "name": "PERCENTS",
+                                                                "title": "процентов"
+                                                            }
+                                                        ],
+                                                        "value": "PERCENTS"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "title": "Размер гарантийного взноса в тенге",
+                                            "validation": {
+                                                "validators": [
+                                                    {
+                                                        "type": "order",
+                                                        "comparison": ">",
+                                                        "message": "Значение должно быть больше нуля",
+                                                        "value": 0
+                                                    }
+                                                ]
+                                            },
+                                            "name": "assuranceAmount",
+                                            "type": "price",
+                                            "decimals": 0,
+                                            "value": 105000.00
+                                        },
+                                        {
+                                            "hideFromEdit": true,
+                                            "previewTitle": "Шаг снижения",
+                                            "title": "Величина снижения цены первоначального предложения",
+                                            "layout": {
+                                                "type": "horizontal",
+                                                "showTitles": true
+                                            },
+                                            "validation": {
+                                                "validators": [
+                                                    {
+                                                        "type": "notBlank",
+                                                        "message": "Поле должно быть заполнено"
+                                                    }
+                                                ]
+                                            },
+                                            "name": "tradeStep",
+                                            "type": "document",
+                                            "document": {
+                                                "fields": [
+                                                    {
+                                                        "validation": {
+                                                            "validators": [
+                                                                {
+                                                                    "type": "order",
+                                                                    "comparison": ">",
+                                                                    "message": "Значение должно быть больше нуля",
+                                                                    "value": 0
+                                                                }
+                                                            ]
+                                                        },
+                                                        "name": "value",
+                                                        "type": "price",
+                                                        "decimals": 0,
+                                                        "value": 3.00
+                                                    },
+                                                    {
+                                                        "name": "mode",
+                                                        "type": "select",
+                                                        "source": {
+                                                            "values": [
+                                                                {
+                                                                    "name": "PERCENTS",
+                                                                    "title": "процентов"
+                                                                },
+                                                                {
+                                                                    "name": "UNITS",
+                                                                    "title": "в валюте торгов"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "allowMultiple": false,
+                                                        "mode": "simple",
+                                                        "initialValues": [
+                                                            {
+                                                                "name": "PERCENTS",
+                                                                "title": "процентов"
+                                                            }
+                                                        ],
+                                                        "value": "PERCENTS"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "hideFromEdit": true,
+                                            "previewTitle": "Шаг аукциона",
+                                            "title": "Величина повышения цены",
+                                            "layout": {
+                                                "type": "horizontal",
+                                                "showTitles": true
+                                            },
+                                            "validation": {
+                                                "validators": [
+                                                    {
+                                                        "type": "notBlank",
+                                                        "message": "Поле должно быть заполнено"
+                                                    },
+                                                    {
+                                                        "type": "notBlank",
+                                                        "message": "Поле должно быть заполнено"
+                                                    }
+                                                ]
+                                            },
+                                            "name": "priceStep",
+                                            "type": "document",
+                                            "document": {
+                                                "fields": [
+                                                    {
+                                                        "validation": {
+                                                            "validators": [
+                                                                {
+                                                                    "type": "order",
+                                                                    "comparison": ">",
+                                                                    "message": "Значение должно быть больше нуля",
+                                                                    "value": 0
+                                                                }
+                                                            ]
+                                                        },
+                                                        "name": "value",
+                                                        "type": "price",
+                                                        "decimals": 0,
+                                                        "value": 3.00
+                                                    },
+                                                    {
+                                                        "name": "mode",
+                                                        "type": "select",
+                                                        "source": {
+                                                            "values": [
+                                                                {
+                                                                    "name": "PERCENTS",
+                                                                    "title": "процентов"
+                                                                },
+                                                                {
+                                                                    "name": "UNITS",
+                                                                    "title": "в валюте торгов"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "allowMultiple": false,
+                                                        "mode": "simple",
+                                                        "initialValues": [
+                                                            {
+                                                                "name": "PERCENTS",
+                                                                "title": "процентов"
+                                                            }
+                                                        ],
+                                                        "value": "PERCENTS"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Информация о порядке участия в торгах",
+                "name": "requirements",
+                "type": "document",
+                "document": {
+                    "fields": [
+                        {
+                            "title": "Реквизиты счета оператора ЕЭТП для перечисления гарантийного взноса",
+                            "displayMode": "VIEW",
+                            "name": "bidAssuranceTerms",
+                            "type": "string",
+                            "value": "Республиканская палата частных судебных исполнителей Республики Казахстан, БИН 111140011112, ИИК KZ73551Z600004492394, АО «Фридом Банк Казахстан», БИК KSNVKZKA, КБЕ 18, КНП 171"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Информация об условиях подачи заявок",
+                "name": "execution",
+                "type": "document",
+                "document": {
+                    "fields": []
+                }
+            },
+            {
+                "title": "Информация об условиях договора",
+                "name": "terms",
+                "type": "document",
+                "document": {
+                    "fields": []
+                }
+            },
+            {
+                "title": "Классификаторы",
+                "name": "classifiers",
+                "type": "document",
+                "document": {
+                    "fields": [
+                        {
+                            "title": "Категории имущества",
+                            "validation": {
+                                "validators": [
+                                    {
+                                        "type": "notBlank",
+                                        "message": "Поле должно быть заполнено"
+                                    }
+                                ]
+                            },
+                            "name": "procurementClassifier",
+                            "type": "treeSelect",
+                            "source": "9zqYylVw09",
+                            "options": [
+                                {
+                                    "name": "100806499",
+                                    "title": "1. Категории имущества",
+                                    "hasChildren": true,
+                                    "options": [
+                                        {
+                                            "name": "100806500",
+                                            "title": "10051001. автобусы",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806501",
+                                            "title": "10051002. автозапчасти",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806502",
+                                            "title": "10051003. акции",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806503",
+                                            "title": "10051004. алкогольная продукция",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806504",
+                                            "title": "10051005. бензин",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806505",
+                                            "title": "10051006. бензопилы",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806506",
+                                            "title": "10051007. бытовая техника",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806507",
+                                            "title": "10051008. бытовая химия",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806508",
+                                            "title": "10051009. гаражи",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806509",
+                                            "title": "10051010. грузовые автомобили",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806510",
+                                            "title": "10051011. диски DVD",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806511",
+                                            "title": "10051012. домашний скот",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806512",
+                                            "title": "10051013. дорожная техника",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806513",
+                                            "title": "10051014. драгоценные металлы, драгоценные камни и изделия из них",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806514",
+                                            "title": "10051016. ёмкость",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806515",
+                                            "title": "10051017. жилые помещения",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806516",
+                                            "title": "10051018. здания и сооружения",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806517",
+                                            "title": "10051019. земельные участки",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806518",
+                                            "title": "10051020. зерно и семена",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806519",
+                                            "title": "10051021. изделия медецинского назначения и медтехника",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806520",
+                                            "title": "10051022. инструменты и стройматериалы",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806521",
+                                            "title": "10051023. компьютеры и оргтехника",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806522",
+                                            "title": "10051024. кухонная утварь, посуда",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806523",
+                                            "title": "10051025. легковые автомобили",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806524",
+                                            "title": "10051026. лом черного и цветного металла",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806525",
+                                            "title": "10051027. мебель",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806526",
+                                            "title": "10051028. металлоконструкции",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806527",
+                                            "title": "10051029. морские биологические ресурсы",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806528",
+                                            "title": "10051030. музыкальные инструменты",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806529",
+                                            "title": "10051031. оборудование шиномонтажа",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806530",
+                                            "title": "10051032. одежда и обувь",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806531",
+                                            "title": "10051033. орудия лова",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806532",
+                                            "title": "10051035. офисное оборудование",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806533",
+                                            "title": "10051036. парфюмерия и косметические средства",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806534",
+                                            "title": "10051037. морские суда",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806535",
+                                            "title": "10051038. суда внутреннего плавания",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806536",
+                                            "title": "10051039. права аренды",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806537",
+                                            "title": "10051040. нежилые помещения",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806538",
+                                            "title": "10051041. дебиторская задолженность",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806539",
+                                            "title": "10051042. предметы декора",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806540",
+                                            "title": "10051043. приборы измерения массы",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806541",
+                                            "title": "10051044. приборы измерения времени",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806542",
+                                            "title": "10051045. продукты питания долгого хранения",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806543",
+                                            "title": "10051046. продукты питания скоропортящиеся",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806544",
+                                            "title": "10051047. продукция лесозаготовительной и лесопильно-деревообрабатывающей промышленности",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806545",
+                                            "title": "10051048. производственное оборудование",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806546",
+                                            "title": "10051049. промышленное оборудование",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806547",
+                                            "title": "10051050. прочая недвижимость",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806548",
+                                            "title": "10051051. прочие категории имущества",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806549",
+                                            "title": "10051052. прочие нефтепродукты",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806550",
+                                            "title": "10051053. прочие транспортные средства, номерные агрегаты и запчасти к ним",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806551",
+                                            "title": "10051054. прочие ценные бумаги",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806552",
+                                            "title": "10051055. речные биологические ресурсы",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806553",
+                                            "title": "10051056. сельхоз продукция",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806554",
+                                            "title": "10051057. сельхоз техника",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806555",
+                                            "title": "10051058. спиртосодержащая продукция",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806556",
+                                            "title": "10051059. станки различного назначения",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806557",
+                                            "title": "10051060. строительные материалы",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806558",
+                                            "title": "10051061. сувениры",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806559",
+                                            "title": "10051062. табак и промышленные заменители табака",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806560",
+                                            "title": "10051063. телевизионная, аудио-видео техника",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806561",
+                                            "title": "10051064. телефонные аппараты",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806562",
+                                            "title": "10051065. товары народного потребления",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806563",
+                                            "title": "10051066. торговое оборудование",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806564",
+                                            "title": "10051067. тракторная техника",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806565",
+                                            "title": "10051068. уголь каменный",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806566",
+                                            "title": "10051069. фото видео камеры",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806567",
+                                            "title": "10051070. хлебные злаки",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806568",
+                                            "title": "10051071. холодильное оборудование",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806569",
+                                            "title": "10051072. электрическая энергия",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806570",
+                                            "title": "10051073. электрооборудование",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806571",
+                                            "title": "10051074. квартира",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806572",
+                                            "title": "10051075. жилой дом",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806573",
+                                            "title": "10051076. жилой комплекс",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806574",
+                                            "title": "10051077. промышленный комплекс",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806575",
+                                            "title": "10051078. коммерческая недвижимость",
+                                            "hasChildren": false
+                                        }
+                                    ]
+                                }
+                            ],
+                            "value": [
+                                "100806523"
+                            ],
+                            "onlyLeafs": false,
+                            "allowMultiple": true,
+                            "configuration": {
+                                "dialogOptions": {
+                                    "size": "large"
+                                }
+                            }
+                        },
+                        {
+                            "title": "Регион",
+                            "validation": {
+                                "validators": [
+                                    {
+                                        "type": "notBlank",
+                                        "message": "Поле должно быть заполнено"
+                                    }
+                                ]
+                            },
+                            "name": "destinationRegion",
+                            "type": "treeSelect",
+                            "source": "esda60xi6J",
+                            "options": [
+                                {
+                                    "name": "100806576",
+                                    "title": "Республика Казахстан",
+                                    "hasChildren": true,
+                                    "options": [
+                                        {
+                                            "name": "100806670",
+                                            "title": "г. Астана",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806669",
+                                            "title": "г. Алматы",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806634",
+                                            "title": "г. Шымкент",
+                                            "hasChildren": false
+                                        },
+                                        {
+                                            "name": "100806577",
+                                            "title": "Карагандинская область",
+                                            "hasChildren": true
+                                        },
+                                        {
+                                            "name": "100806578",
+                                            "title": "Восточно-Казахстанская область",
+                                            "hasChildren": true
+                                        },
+                                        {
+                                            "name": "100806579",
+                                            "title": "Алматинская область",
+                                            "hasChildren": true
+                                        },
+                                        {
+                                            "name": "100806580",
+                                            "title": "Жамбылская область",
+                                            "hasChildren": true
+                                        },
+                                        {
+                                            "name": "100806581",
+                                            "title": "Туркестанская область",
+                                            "hasChildren": true
+                                        },
+                                        {
+                                            "name": "100806582",
+                                            "title": "Кызылординская область",
+                                            "hasChildren": true
+                                        },
+                                        {
+                                            "name": "100806583",
+                                            "title": "Актюбинская область",
+                                            "hasChildren": true
+                                        },
+                                        {
+                                            "name": "100806584",
+                                            "title": "Костанайская область",
+                                            "hasChildren": true
+                                        },
+                                        {
+                                            "name": "100806585",
+                                            "title": "Северо-Казахстанская область",
+                                            "hasChildren": true
+                                        },
+                                        {
+                                            "name": "100806586",
+                                            "title": "Акмолинская область",
+                                            "hasChildren": true
+                                        },
+                                        {
+                                            "name": "100806587",
+                                            "title": "Павлодарская область",
+                                            "hasChildren": true
+                                        },
+                                        {
+                                            "name": "100806588",
+                                            "title": "Западно-Казахстанская область",
+                                            "hasChildren": true
+                                        },
+                                        {
+                                            "name": "100806589",
+                                            "title": "Атырауская область",
+                                            "hasChildren": true
+                                        },
+                                        {
+                                            "name": "100806590",
+                                            "title": "Мангистауская область",
+                                            "hasChildren": true
+                                        },
+                                        {
+                                            "name": "106210303",
+                                            "title": "Область Ұлытау",
+                                            "hasChildren": true
+                                        },
+                                        {
+                                            "name": "106210304",
+                                            "title": "Область Абай",
+                                            "hasChildren": true
+                                        },
+                                        {
+                                            "name": "106210388",
+                                            "title": "Область Жетісу",
+                                            "hasChildren": true
+                                        }
+                                    ]
+                                }
+                            ],
+                            "value": [
+                                "100806669"
+                            ],
+                            "onlyLeafs": false,
+                            "allowMultiple": true,
+                            "configuration": {
+                                "dialogOptions": {
+                                    "size": "large"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Документы",
+                "name": "documents",
+                "type": "document",
+                "document": {
+                    "fields": [
+                        {
+                            "title": "Другие документы",
+                            "name": "attachments_other",
+                            "type": "file",
+                            "allowMultiple": true,
+                            "documentType": "other",
+                            "requiresSignature": true,
+                            "allowChooseFromTemplates": false,
+                            "value": [
+                                {
+                                    "name": "5.jpeg",
+                                    "href": "/files/get/47Uu11PVX8hc2cgbgZXuWq1ayZE6sVBhnXGQXCnxdARPcY6AHkmkrHTmYtLV7zaH6qL2AATbAPtLQqb6cY1YoqraGMBQupxzkYb/5.jpeg",
+                                    "type": "application",
+                                    "size": 126596,
+                                    "reference": "nZ99yrVMFuvRtGnYJT63gqSkbut7eLT6dgJ2SbCWgdepMfr1Cw6na7sKWPaF",
+                                    "id": 112356003,
+                                    "uid": "112356003",
+                                    "preview": {
+                                        "id": 112356003,
+                                        "name": "5.jpeg",
+                                        "token": "47Uu11PVX8hc2cgbgZXuWq1ayZE6sVBhnXGQXCnxdARPcY6AHkmkrHTmYtLV7zaH6qL2AATbAPtLQqb6cY1YoqraGMBQupxzkYb",
+                                        "href": "/files/get/47Uu11PVX8hc2cgbgZXuWq1ayZE6sVBhnXGQXCnxdARPcY6AHkmkrHTmYtLV7zaH6qL2AATbAPtLQqb6cY1YoqraGMBQupxzkYb/5.jpeg",
+                                        "icon": "fa fa-file-o",
+                                        "size": "123,63 Кбайт",
+                                        "date": "19.02.2026",
+                                        "generating": false,
+                                        "documentType": {
+                                            "code": "other",
+                                            "id": 100730731,
+                                            "title": "Другие документы"
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": "2.jpeg",
+                                    "href": "/files/get/47Uu11PVX8hc2cgbgZXuWq1ayZE6sVBhnXGQXCnxdAMX3G7Vw49UDUPzaatSruxcmqZbv2sM76VS81Dk9UfsPTjmqpRgpf8DkfE/2.jpeg",
+                                    "type": "application",
+                                    "size": 120272,
+                                    "reference": "nZ99yrVMFuvRtGnYJT63gqSkbut7eLT6dgJ2Gy4ipbjtPttq2JZBhio6FgET",
+                                    "id": 112356007,
+                                    "uid": "112356007",
+                                    "preview": {
+                                        "id": 112356007,
+                                        "name": "2.jpeg",
+                                        "token": "47Uu11PVX8hc2cgbgZXuWq1ayZE6sVBhnXGQXCnxdAMX3G7Vw49UDUPzaatSruxcmqZbv2sM76VS81Dk9UfsPTjmqpRgpf8DkfE",
+                                        "href": "/files/get/47Uu11PVX8hc2cgbgZXuWq1ayZE6sVBhnXGQXCnxdAMX3G7Vw49UDUPzaatSruxcmqZbv2sM76VS81Dk9UfsPTjmqpRgpf8DkfE/2.jpeg",
+                                        "icon": "fa fa-file-o",
+                                        "size": "117,45 Кбайт",
+                                        "date": "19.02.2026",
+                                        "generating": false,
+                                        "documentType": {
+                                            "code": "other",
+                                            "id": 100730731,
+                                            "title": "Другие документы"
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": "Отчёт № 12-10 мотоцикл KAWASAKI ER-6N++.pdf",
+                                    "href": "/files/get/47Uu11PVX8hc2cgbgZXuWq1ayZE6sVBhnXGQXCnxdAc3C3XUmgVYbWteiiKbLTmM15Bfq2LFpUDpEXbNgB6CQDJfJofNww9rHQt/%D0%9E%D1%82%D1%87%D1%91%D1%82%20%E2%84%96%2012-10%20%D0%BC%D0%BE%D1%82%D0%BE%D1%86%D0%B8%D0%BA%D0%BB%20KAWASAKI%20ER-6N__.pdf",
+                                    "type": "application",
+                                    "size": 7059970,
+                                    "reference": "nZ99yrVMFuvRtGnYJT63gqSkbut7eLT6dgJ2EZMjLtCLZEPbZZQTZRSJ4jFm",
+                                    "id": 112356008,
+                                    "uid": "112356008",
+                                    "preview": {
+                                        "id": 112356008,
+                                        "name": "Отчёт № 12-10 мотоцикл KAWASAKI ER-6N++.pdf",
+                                        "token": "47Uu11PVX8hc2cgbgZXuWq1ayZE6sVBhnXGQXCnxdAc3C3XUmgVYbWteiiKbLTmM15Bfq2LFpUDpEXbNgB6CQDJfJofNww9rHQt",
+                                        "href": "/files/get/47Uu11PVX8hc2cgbgZXuWq1ayZE6sVBhnXGQXCnxdAc3C3XUmgVYbWteiiKbLTmM15Bfq2LFpUDpEXbNgB6CQDJfJofNww9rHQt/%D0%9E%D1%82%D1%87%D1%91%D1%82%20%E2%84%96%2012-10%20%D0%BC%D0%BE%D1%82%D0%BE%D1%86%D0%B8%D0%BA%D0%BB%20KAWASAKI%20ER-6N__.pdf",
+                                        "icon": "fa fa-file-o",
+                                        "size": "6,00 Мбайт",
+                                        "date": "19.02.2026",
+                                        "generating": false,
+                                        "documentType": {
+                                            "code": "other",
+                                            "id": 100730731,
+                                            "title": "Другие документы"
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": "3.jpeg",
+                                    "href": "/files/get/47Uu11PVX8hc2cgbgZXuWq1ayZE6sVBhnXGQXCnxdAb53j2pBWLUSK8Cydxamh7RvKk4mVSCJeNbAM6cTREumrnDtiixsbTtxup/3.jpeg",
+                                    "type": "application",
+                                    "size": 110433,
+                                    "reference": "nZ99yrVMFuvRtGnYJT63gqSkbut7eLT6dgJ2C9q1WZZAzbWKejzZpMbSLEfH",
+                                    "id": 112356009,
+                                    "uid": "112356009",
+                                    "preview": {
+                                        "id": 112356009,
+                                        "name": "3.jpeg",
+                                        "token": "47Uu11PVX8hc2cgbgZXuWq1ayZE6sVBhnXGQXCnxdAb53j2pBWLUSK8Cydxamh7RvKk4mVSCJeNbAM6cTREumrnDtiixsbTtxup",
+                                        "href": "/files/get/47Uu11PVX8hc2cgbgZXuWq1ayZE6sVBhnXGQXCnxdAb53j2pBWLUSK8Cydxamh7RvKk4mVSCJeNbAM6cTREumrnDtiixsbTtxup/3.jpeg",
+                                        "icon": "fa fa-file-o",
+                                        "size": "107,84 Кбайт",
+                                        "date": "19.02.2026",
+                                        "generating": false,
+                                        "documentType": {
+                                            "code": "other",
+                                            "id": 100730731,
+                                            "title": "Другие документы"
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": "6.jpeg",
+                                    "href": "/files/get/47Uu11PVX8hc2cgbgZXuWq1ayZE6sVBhnXGQXCnxdEhCLAcV8ap7UDdPg94ym5va4aLmkYF6obA3TdsKbwTooEfkNZAJBSGEuAH/6.jpeg",
+                                    "type": "application",
+                                    "size": 104222,
+                                    "reference": "nZ99yrVMFuvRtGnYJT63gqSkbut7eLT6dgHqpjeArAFYEBeGFbZnvMPazLxg",
+                                    "id": 112356013,
+                                    "uid": "112356013",
+                                    "preview": {
+                                        "id": 112356013,
+                                        "name": "6.jpeg",
+                                        "token": "47Uu11PVX8hc2cgbgZXuWq1ayZE6sVBhnXGQXCnxdEhCLAcV8ap7UDdPg94ym5va4aLmkYF6obA3TdsKbwTooEfkNZAJBSGEuAH",
+                                        "href": "/files/get/47Uu11PVX8hc2cgbgZXuWq1ayZE6sVBhnXGQXCnxdEhCLAcV8ap7UDdPg94ym5va4aLmkYF6obA3TdsKbwTooEfkNZAJBSGEuAH/6.jpeg",
+                                        "icon": "fa fa-file-o",
+                                        "size": "101,78 Кбайт",
+                                        "date": "19.02.2026",
+                                        "generating": false,
+                                        "documentType": {
+                                            "code": "other",
+                                            "id": 100730731,
+                                            "title": "Другие документы"
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": "1.jpeg",
+                                    "href": "/files/get/47Uu11PVX8hc2cgbgZXuWq1ayZE6sVBhnXGQXCnxdEfG3Xd9xEVy9p6WBzLxdYcju5TZdUSymwTbK7r8Exq5rDUks14ePfJ6Npn/1.jpeg",
+                                    "type": "application",
+                                    "size": 139623,
+                                    "reference": "nZ99yrVMFuvRtGnYJT63gqSkbut7eLT6dgHqjvexVViVUttRmM25cSambYVW",
+                                    "id": 112356015,
+                                    "uid": "112356015",
+                                    "preview": {
+                                        "id": 112356015,
+                                        "name": "1.jpeg",
+                                        "token": "47Uu11PVX8hc2cgbgZXuWq1ayZE6sVBhnXGQXCnxdEfG3Xd9xEVy9p6WBzLxdYcju5TZdUSymwTbK7r8Exq5rDUks14ePfJ6Npn",
+                                        "href": "/files/get/47Uu11PVX8hc2cgbgZXuWq1ayZE6sVBhnXGQXCnxdEfG3Xd9xEVy9p6WBzLxdYcju5TZdUSymwTbK7r8Exq5rDUks14ePfJ6Npn/1.jpeg",
+                                        "icon": "fa fa-file-o",
+                                        "size": "136,35 Кбайт",
+                                        "date": "19.02.2026",
+                                        "generating": false,
+                                        "documentType": {
+                                            "code": "other",
+                                            "id": 100730731,
+                                            "title": "Другие документы"
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": "7.jpeg",
+                                    "href": "/files/get/47Uu11PVX8hc2cgbgZXuWq1ayZE6sVBhnXGQXCnxdEeHuD8VN4LtzcL4Suyx4mxppL1xZwYvG7cNEQJ88tmy8BrL1quDuSdD9MA/7.jpeg",
+                                    "type": "application",
+                                    "size": 113629,
+                                    "reference": "nZ99yrVMFuvRtGnYJT63gqSkbut7eLT6dgHqhXABTBXNrSzGUtxaVXap1Vf6",
+                                    "id": 112356016,
+                                    "uid": "112356016",
+                                    "preview": {
+                                        "id": 112356016,
+                                        "name": "7.jpeg",
+                                        "token": "47Uu11PVX8hc2cgbgZXuWq1ayZE6sVBhnXGQXCnxdEeHuD8VN4LtzcL4Suyx4mxppL1xZwYvG7cNEQJ88tmy8BrL1quDuSdD9MA",
+                                        "href": "/files/get/47Uu11PVX8hc2cgbgZXuWq1ayZE6sVBhnXGQXCnxdEeHuD8VN4LtzcL4Suyx4mxppL1xZwYvG7cNEQJ88tmy8BrL1quDuSdD9MA/7.jpeg",
+                                        "icon": "fa fa-file-o",
+                                        "size": "110,97 Кбайт",
+                                        "date": "19.02.2026",
+                                        "generating": false,
+                                        "documentType": {
+                                            "code": "other",
+                                            "id": 100730731,
+                                            "title": "Другие документы"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "hideFromEdit": true,
+                "title": "Информация об отмене торгов",
+                "name": "cancels",
+                "type": "document",
+                "document": {
+                    "fields": [
+                        {
+                            "name": "tradeCancels",
+                            "type": "collection",
+                            "template": {
+                                "fields": [
+                                    {
+                                        "title": "Дата",
+                                        "gridColumnWidth": 150,
+                                        "name": "cancelDate",
+                                        "type": "date",
+                                        "mode": "KENDO"
+                                    },
+                                    {
+                                        "title": "Лоты",
+                                        "name": "lots",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "title": "Причины отмены",
+                                        "name": "reasoning",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "title": "Приложения",
+                                        "name": "attachments_cancel",
+                                        "type": "file",
+                                        "allowMultiple": true,
+                                        "documentType": "cancel",
+                                        "requiresSignature": true,
+                                        "allowChooseFromTemplates": false,
+                                        "value": []
+                                    }
+                                ]
+                            },
+                            "minDocuments": null,
+                            "maxDocuments": null,
+                            "view": "default",
+                            "documents": []
+                        }
+                    ]
+                }
+            }
+        ],
+        "$class": "ru.umeta.platform.documents.Document"
+    },
+    "id": 112356019
+}
