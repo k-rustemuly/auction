@@ -2,9 +2,12 @@
 
 namespace App\Models;
 
+use App\Observers\TradeObserver;
+use Illuminate\Database\Eloquent\Attributes\ObservedBy;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
+#[ObservedBy([TradeObserver::class])]
 class Trade extends LocalizableModel
 {
     protected $fillable = [

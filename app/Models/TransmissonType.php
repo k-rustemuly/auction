@@ -2,6 +2,10 @@
 
 namespace App\Models;
 
+use App\Observers\TransmissonTypeObserver;
+use Illuminate\Database\Eloquent\Attributes\ObservedBy;
+
+#[ObservedBy([TransmissonTypeObserver::class])]
 class TransmissonType extends LocalizableModel
 {
     protected $fillable = [

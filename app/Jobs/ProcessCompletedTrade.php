@@ -35,7 +35,7 @@ class ProcessCompletedTrade implements ShouldQueue
             ->where('tradeStartDate', '<=', now()->format('Y-m-d'))
             ->whereNotIn('status_id', [Status::CANCELED, Status::NOT_COMPLETED])
             ->first();
-        log($trade->id.';');
+
         if (! $trade) return;
 
         $etpService->fetchTrade($trade);

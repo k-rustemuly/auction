@@ -47,6 +47,7 @@ class TradeIndexPage extends IndexPage
             Image::make(__('moonshine::ui.field.thumbnail'), 'thumbnail')
                 ->itemAttributes(fn($item) => [
                     'src' => $item,
+                    'alt' => '123'
                 ])
                 ->disk('public'),
             BelongsTo::make(__('moonshine::ui.field.category'), 'category', fn(Category $category) => $category->name, CategoryResource::class),

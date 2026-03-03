@@ -3,8 +3,10 @@
 namespace App\Providers;
 
 use App\Models\Car;
+use App\Models\Status;
 use App\Models\Trade;
 use App\Observers\CarObserver;
+use App\Observers\StatusObserver;
 use App\Observers\TradeObserver;
 use Illuminate\Support\ServiceProvider;
 
@@ -23,7 +25,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Trade::observe(TradeObserver::class);
-        Car::observe(CarObserver::class);
+        //
     }
 }

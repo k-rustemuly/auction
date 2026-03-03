@@ -2,8 +2,10 @@
 
 namespace App\Observers;
 
+use App\Models\Status;
 use App\Models\Trade;
 use App\Module\Etp\Services\EtpService;
+use Illuminate\Support\Facades\Storage;
 
 class TradeObserver
 {
@@ -26,6 +28,25 @@ class TradeObserver
                 $trade->minContractPrice = $trade->initialContractPrice;
             }
 
+        }
+
+        if ($trade->isDirty('status_id')
+            && in_array($trade->status_id, [
+                Status::COMPLETED,
+                Status::CANCELED,
+                Status::NOT_COMPLETED
+            ])
+            && is_array($trade->documents)
+            && !empty($trade->documents)
+        )
+        {
+            foreach($trade->documents as $document) {
+                if (Storage::disk('public')->exists($document['url'])) {
+                    logger($document['url']);
+                    Storage::disk('public')->delete($document['url']);
+                }
+            }
+            $trade->documents = null;
         }
     }
 

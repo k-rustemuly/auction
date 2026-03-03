@@ -2,8 +2,11 @@
 
 namespace App\Models;
 
+use App\Observers\CarObserver;
+use Illuminate\Database\Eloquent\Attributes\ObservedBy;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
+#[ObservedBy([CarObserver::class])]
 class Car extends LocalizableModel
 {
     protected $localizable = [
@@ -82,5 +85,10 @@ class Car extends LocalizableModel
     public function color(): BelongsTo
     {
         return $this->belongsTo(Color::class);
+    }
+
+    public function region(): BelongsTo
+    {
+        return $this->belongsTo(Region::class);
     }
 }

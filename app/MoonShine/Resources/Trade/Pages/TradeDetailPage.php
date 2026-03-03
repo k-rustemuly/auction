@@ -242,6 +242,7 @@ class TradeDetailPage extends DetailPage
                             Column::make(
                                 [
                                     Tabs::make([...$this->getTabs()])
+                                        ->canSee(fn() => $this->getItem()?->status_id == Status::BID_SUBMISSION)
                                 ],
                                 colSpan: 8,
                                 adaptiveColSpan: 8
