@@ -19,6 +19,7 @@ use App\MoonShine\Resources\Status\StatusResource;
 use App\MoonShine\Resources\Trade\TradeResource;
 use MoonShine\AssetManager\Js;
 use App\MoonShine\Resources\Color\ColorResource;
+use App\MoonShine\Resources\Country\CountryResource;
 
 final class MoonShineLayout extends AppLayout
 {
@@ -47,6 +48,7 @@ final class MoonShineLayout extends AppLayout
             MenuItem::make(EngineTypeResource::class, __('moonshine::ui.resource.engine_type_title')),
             MenuItem::make(StatusResource::class, __('moonshine::ui.resource.status_title')),
             MenuItem::make(ColorResource::class, __('moonshine::ui.resource.color_title')),
+            MenuItem::make(CountryResource::class, __('moonshine::ui.resource.countries_title')),
         ];
     }
 

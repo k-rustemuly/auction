@@ -8,6 +8,7 @@ use App\Models\Car;
 use App\Models\CarModel;
 use App\Models\Category;
 use App\Models\Color;
+use App\Models\Country;
 use App\Models\EngineType;
 use App\Models\Mark;
 use App\Models\Status;
@@ -44,6 +45,7 @@ use MoonShine\UI\Collections\Fields;
 use MoonShine\UI\Components\Tabs;
 use MoonShine\UI\Components\Tabs\Tab;
 use MoonShine\UI\Fields\Number;
+use Sunrise\Vin\Vin;
 
 /**
  * @extends DetailPage<TradeResource>
@@ -168,7 +170,7 @@ class TradeDetailPage extends DetailPage
                                         ->options(Mark::pluck('name', 'id')->toArray())
                                         ->searchable()
                                         ->nullable()
-                                        ->reactive(function(Fields $fields, ?string $value, Field $field, array $values): Fields {
+                                        ->reactive(function(Fields $fields, mixed $value, Field $field, array $values): Fields {
                                             $field->setValue($value);
 
                                             return tap($fields, static fn ($fields) =>
@@ -187,14 +189,33 @@ class TradeDetailPage extends DetailPage
                                     Number::make(__('moonshine::ui.field.year'), 'year')
                                         ->min(1900)
                                         ->max((int) date('Y'))
-                                        ->nullable(),
+                                        ->nullable()
+                                        ->reactive(),
                                     Text::make(__('moonshine::ui.field.engine_capacity'), 'engine_capacity')
                                         ->nullable(),
                                     Select::make(__('moonshine::ui.field.transmission_type'), 'transmisson_type_id')
                                         ->options(TransmissonType::all()->pluck('name', 'id')->toArray())
                                         ->nullable(),
                                     Text::make(__('moonshine::ui.field.vin'), 'vin')
-                                        ->nullable(),
+                                        ->nullable()
+                                        ->reactive(function(Fields $fields, ?string $value, Field $field, array $values): Fields {
+                                            $field->setValue($value);
+                                            if (strlen($value) == 17) {
+                                                //
+                                                $vin = new Vin($value);
+
+                                                $years = $vin->getModelYear();
+                                                $year = $years ? end($years) : '';
+
+                                                $fields->findByColumn('year')?->setValue($year);
+                                                $fields->findByColumn('country_id')?->setValue(Country::where('name_en', $vin->getCountry())->first()?->id ?? null);
+
+                                                return $fields;
+                                            }
+                                            return $fields;
+                                            },
+                                            silent: true
+                                        ),
                                 ],
                                 colSpan: 2,
                                 adaptiveColSpan: 2
@@ -235,6 +256,11 @@ class TradeDetailPage extends DetailPage
                                         ->options(Color::all()->pluck('name', 'id')->toArray())
                                         ->searchable()
                                         ->nullable(),
+                                    Select::make(__('moonshine::ui.field.country'), 'country_id')
+                                        ->options(Country::all()->pluck('name', 'id')->toArray())
+                                        ->searchable()
+                                        ->nullable()
+                                        ->reactive(),
                                 ],
                                 colSpan: 2,
                                 adaptiveColSpan: 2

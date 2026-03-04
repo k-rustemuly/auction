@@ -18,6 +18,7 @@ class Car extends LocalizableModel
         'trade_id',
         'status_id',
         'region_id',
+        'country_id',
         'mark_id',
         'car_model_id',
         'year',
@@ -55,6 +56,11 @@ class Car extends LocalizableModel
     public function trade(): BelongsTo
     {
         return $this->belongsTo(Trade::class);
+    }
+
+    public function country(): BelongsTo
+    {
+        return $this->belongsTo(Country::class);
     }
 
     public function status(): BelongsTo

@@ -67,6 +67,7 @@ return [
         'admins_title' => 'Администраторы',
         'role_title' => 'Роли',
         'role_name' => 'Название',
+        'countries_title' => 'Страны',
 
         'main_information' => 'Основная информация',
         'change_password' => 'Изменить пароль',
@@ -95,6 +96,7 @@ return [
         'code' => 'Код',
         'name_kk' => 'Название (Каз)',
         'name_ru' => 'Название (Рус)',
+        'name_en' => 'Название (Анг)',
         'name' => 'Название',
         'is_popular' => 'Популярная?',
         'kolesa_id' => 'ID на колесе',
@@ -127,7 +129,8 @@ return [
         'transmission_type' => 'Тип трансмиссии',
         'color' => 'Цвет',
         'vin' => 'VIN',
-        'method' => 'Метод'
+        'method' => 'Метод',
+        'country' => 'Страна',
     ],
     'button' => [
         'method_down' => 'Понижение',

@@ -19,6 +19,7 @@ use App\MoonShine\Resources\EngineType\EngineTypeResource;
 use App\MoonShine\Resources\Status\StatusResource;
 use App\MoonShine\Resources\Trade\TradeResource;
 use App\MoonShine\Resources\Color\ColorResource;
+use App\MoonShine\Resources\Country\CountryResource;
 
 class MoonShineServiceProvider extends ServiceProvider
 {
@@ -40,6 +41,7 @@ class MoonShineServiceProvider extends ServiceProvider
                 StatusResource::class,
                 TradeResource::class,
                 ColorResource::class,
+                CountryResource::class,
             ])
             ->pages([
                 ...$core->getConfig()->getPages(),

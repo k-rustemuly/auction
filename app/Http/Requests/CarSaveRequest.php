@@ -37,13 +37,14 @@ class CarSaveRequest extends FormRequest
             'mark_id'               => ['required', 'exists:marks,id'],
             'year'                  => ['nullable', 'date_format:Y'],
             'engine_capacity'       => ['nullable', 'decimal:0,100'],
-            'transmisson_type_id'  => ['nullable', 'exists:transmisson_types,id'],
+            'transmisson_type_id'   => ['nullable', 'exists:transmisson_types,id'],
             'vin'                   => ['nullable', 'string'],
             'car_model_id'          => ['required', 'exists:car_models,id'],
             'mileage'               => ['nullable', 'integer', 'min:0'],
             'mileage_unit'          => ['nullable', 'in:km,mi'],
             'engine_type_id'        => ['nullable', 'exists:engine_types,id'],
             'color_id'              => ['nullable', 'exists:colors,id'],
+            'country_id'            => ['nullable', 'exists:countries,id']
         ];
     }
 }

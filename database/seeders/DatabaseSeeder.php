@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
             TransmissionTypeSeeder::class,
             StatusSeeder::class,
             ColorSeeder::class,
+            CountrySeeder::class,
         ]);
     }
 }
